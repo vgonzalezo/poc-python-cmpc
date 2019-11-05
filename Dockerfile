@@ -8,7 +8,7 @@ COPY requirements.txt ./
 
 RUN apt update && apt-get install -y libxss1 libappindicator1 libindicator7 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt install -f ./google-chrome*.deb
+RUN apt install -y ./google-chrome*.deb
 
 RUN pip install --no-cache-dir -r requirements.txt
 
