@@ -5,15 +5,13 @@ import time
 import os
 import random
 from webdriver_manager.chrome import ChromeDriverManager
-import chromedriver_binary  # Adds chromedriver binary to path
 
 driver = webdriver.Chrome()
 
 
 def abrir_chrome(path,carpeta_descargas,url):
     #driver = webdriver.Chrome("%s/chromedriver" % path)
-    driver = webdriver.Chrome()
-    #driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
     driver.get(f"http://{url}")  
     return driver
