@@ -12,9 +12,9 @@ def abrir_chrome(path,carpeta_descargas,url):
     return driver
 
 def borrar_docs(path,carpeta):
-    entries = os.scandir("%s\\%s" % (path,carpeta))
+    entries = os.scandir("%s/%s" % (path,carpeta))
     for entry in entries:
-        entrypath = "%s\\%s\\%s" % (path,carpeta,entry.name)
+        entrypath = "%s/%s/%s" % (path,carpeta,entry.name)
         os.unlink(entrypath)    
 
 def crear_txt(path,indice,carpeta):
