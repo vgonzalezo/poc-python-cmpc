@@ -18,14 +18,14 @@ def borrar_docs(path,carpeta):
         os.unlink(entrypath)    
 
 def crear_txt(path,indice,carpeta):
-    entries = os.scandir(f"{path}\\{carpeta}\\{indice}")
+    entries = os.scandir(f"{path}/{carpeta}/{indice}")
     print(entries)
-    with open(f"output\\output_{indice}.txt","w+") as f:
+    with open(f"output/output_{indice}.txt","w+") as f:
         for entry in entries:
             f.write(f"{entry.name}\n")
 
 def main_tsoft_1(path,cant):
-    borrar_docs(path,"Descargas\\1")
+    borrar_docs(path,"Descargas/1")
     driver = abrir_chrome(path,"Descargas","toastytech.com/evil/")
     links = driver.find_elements_by_tag_name("a")
     links = [l.get_attribute("href") for l in links]
@@ -34,7 +34,7 @@ def main_tsoft_1(path,cant):
         driver.get(random.choice(links))
         try:
             name = f"{random.randint(1,101)}_{random.randint(101,201)}_{i}.png"
-            with open(f"Descargas\\1\\{name}", 'wb') as file:
+            with open(f"Descargas/1/{name}", 'wb') as file:
                 file.write(driver.find_element_by_tag_name('img').screenshot_as_png)
             print(f"Descarga {name}")
         except Exception as e:
