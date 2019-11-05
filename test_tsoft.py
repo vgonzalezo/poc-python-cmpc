@@ -4,13 +4,14 @@ from selenium import webdriver
 import time
 import os
 import random
-#from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
+
+from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.firefox import GeckoDriverManager
 
 def abrir_chrome(path,carpeta_descargas,url):
     #driver = webdriver.Chrome("%s/chromedriver" % path)
-    #driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+    driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+    #driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     driver.maximize_window()
     driver.get(f"http://{url}")  
     return driver
