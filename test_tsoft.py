@@ -6,9 +6,6 @@ import os
 import random
 from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome()
-
-
 def abrir_chrome(path,carpeta_descargas,url):
     #driver = webdriver.Chrome("%s/chromedriver" % path)
     driver = webdriver.Chrome(ChromeDriverManager().install())
