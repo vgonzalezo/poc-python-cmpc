@@ -4,15 +4,15 @@ from selenium import webdriver
 import time
 import os
 import random
-from pyvirtualdisplay import Display
+#from pyvirtualdisplay import Display
 
 
 from webdriver_manager.chrome import ChromeDriverManager
 #from webdriver_manager.firefox import GeckoDriverManager
 
 def abrir_chrome(path,carpeta_descargas,url):
-    display = Display(visible=0, size=(800, 800))  
-    display.start()
+    #display = Display(visible=0, size=(800, 800))  
+    #display.start()
     #driver = webdriver.Chrome("%s/chromedriver" % path)
     driver = webdriver.PhantomJS()
     #driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
