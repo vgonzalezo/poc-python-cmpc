@@ -4,9 +4,12 @@ from selenium import webdriver
 import time
 import os
 import random
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 def abrir_chrome(path,carpeta_descargas,url):
-    driver = webdriver.Chrome("%s/chromedriver" % path)
+    #driver = webdriver.Chrome("%s/chromedriver" % path)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
     driver.get(f"http://{url}")  
     return driver
