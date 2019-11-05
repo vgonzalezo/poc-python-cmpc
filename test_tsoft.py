@@ -6,7 +6,7 @@ import os
 import random
 
 def abrir_chrome(path,carpeta_descargas,url):
-    driver = webdriver.Chrome("%s\\chromedriver.exe" % path)
+    driver = webdriver.Chrome("%s/chromedriver" % path)
     driver.maximize_window()
     driver.get(f"http://{url}")  
     return driver
