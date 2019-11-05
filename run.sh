@@ -1,0 +1,1 @@
+docker run --name poc-python-cmpc -itd -p 80:7000 tsoftglobal/cmpc:poc-python
